@@ -18,10 +18,9 @@ jobs:
       contents: read  # for actions/checkout to fetch code
       pull-requests: read  # for golangci/golangci-lint-action to fetch pull requests
     name: lint
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on:
+      group: default-tools
+      labels: arc-light
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v3
