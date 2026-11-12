@@ -20,9 +20,7 @@ jobs:
       contents: read  # for actions/checkout to fetch code
       pull-requests: read  # for golangci/golangci-lint-action to fetch pull requests
     name: lint
-    runs-on:
-      group: default-tools
-      labels: arc-light
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v3
